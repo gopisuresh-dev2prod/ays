@@ -15,14 +15,8 @@ const app = express();
 
 
 
-const corsOptions = {
-  origin: ['http://localhost:3000'],
-  optionsSuccessStatus: 200,
-  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow the required methods
-  allowedHeaders: ['Content-Type', 'Authorization'], // Allow the required headers
-};
-
-app.use(cors(corsOptions));
+// Enable CORS for all routes
+app.use(cors());
 
 // Middleware
 app.use(express.json());
